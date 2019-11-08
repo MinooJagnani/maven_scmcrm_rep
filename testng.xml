@@ -1,0 +1,26 @@
+<suite name="Suite" parallel="tests">
+  <test  name="ChromeTest">
+      <parameter name="nodeurl" value="http://192.168.43.25:4444/wd/hub/"/>
+      <parameter name="browser" value="chrome"/>
+      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
+    <packages>
+      <package name="maven_smcrm_tests"/>
+    </packages>
+  </test> 
+  <test  name="FirefoxTest">
+      <parameter name="nodeurl" value="http://192.168.43.25:4444/wd/hub/"/>
+      <parameter name="browser" value="firefox"/>
+      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
+    <packages>
+      <package name="maven_smcrm_tests"/>
+    </packages>
+  </test> 
+  <test  name="IETest">
+      <parameter name="nodeurl" value="http://192.168.43.25:4444/wd/hub/"/>
+      <parameter name="browser" value="internet explorer"/>
+      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
+    <packages>
+      <package name="maven_smcrm_tests"/>
+    </packages>
+  </test> 
+</suite> 
