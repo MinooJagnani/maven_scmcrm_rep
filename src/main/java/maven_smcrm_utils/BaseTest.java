@@ -40,15 +40,23 @@ public abstract class BaseTest implements Autoconstant
 		driver = new ChromeDriver();
 		driver.get(appurl);
 	}
-	@AfterClass
-	public void postcondition(ITestResult res)
+	@AfterMethod
+	public void postcondition(ITestResult res) 
 	{
+		
 		int status = res.getStatus();
 		if(status==2)
 		{
 			String name = res.getMethod().getMethodName();
 			GenericUtils.getScreenShot(driver, name);
 		}
+		//driver.close();
+
+	}
+	@AfterClass
+	public void tearDown()
+	{
 		driver.close();
 	}
+	
 }
