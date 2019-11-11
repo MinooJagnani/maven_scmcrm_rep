@@ -20,6 +20,8 @@ public class ValidLoginCrmTest extends BaseTest{
 		lp.verifyTitle(strloginTitle);
 		lp.enterLoginName(strLoginId);
 		lp.enterLoginPassword(strLoginPwd);
+		Reporter.log("user id ---" + strLoginId, true);
+		Reporter.log("password ---" + strLoginPwd, true);
 		lp.clickOnLoginButton();
 		
 		HomePage hp= new HomePage(driver);
@@ -27,5 +29,21 @@ public class ValidLoginCrmTest extends BaseTest{
 	    hp.verifyTitle(strHomeTitle);
 		
 	}
+	
+	@Test(priority=2)
+	public void verifyCampaign()
+	{
+		//LoginPage lp=new LoginPage(driver);
+		//String strloginTitle = ExcelData.getData(file_path, "TC01", 1, 2);
+	//	lp.verifyTitle(strloginTitle);
+
+	HomePage hp = new HomePage(driver);	
+	
+	hp.verifyNewCampaignLink();
+	String strCampaignTitle = ExcelData.getData(file_path, "TC03", 1, 0);
+	Reporter.log("strCampaignTitle ---" + strCampaignTitle, true);
+	hp.verifyTitle(strCampaignTitle);
+	}
+
 
 }
