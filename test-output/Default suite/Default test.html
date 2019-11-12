@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/4</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 09 11:21:27 IST 2019</td>
+<td>Started on:</td><td>Tue Nov 12 12:03:25 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (165 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (333 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,23 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='maven_smcrm_tests.HomePageNewCampaignLinkTest.precondition()'><b>precondition</b><br>Test class: maven_smcrm_tests.HomePageNewCampaignLinkTest</td>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.precondition()'><b>precondition</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Parameter &apos;nodeurl&apos; is required by BeforeMethod on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuite.xml
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:289)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 	at java.util.ArrayList.forEach(Unknown Source)
 	at org.testng.TestRunner.privateRun(TestRunner.java:770)
 	at org.testng.TestRunner.run(TestRunner.java:591)
@@ -108,23 +102,17 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace212921632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace212921632'><pre>org.testng.TestNGException: 
-Parameter &apos;nodeurl&apos; is required by BeforeMethod on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuite.xml
+</pre></div><a href='#' onClick='toggleBox("stack-trace331510866", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331510866'><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:289)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 	at java.util.ArrayList.forEach(Unknown Source)
 	at org.testng.TestRunner.privateRun(TestRunner.java:770)
 	at org.testng.TestRunner.run(TestRunner.java:591)
@@ -142,8 +130,8 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>-1573278687</td>
-<td>maven_smcrm_tests.HomePageNewCampaignLinkTest@7494e528</td></tr>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -153,10 +141,30 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='maven_smcrm_tests.HomePageNewCampaignLinkTest.postcondition()'><b>postcondition</b><br>Test class: maven_smcrm_tests.HomePageNewCampaignLinkTest</td>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.postcondition()'><b>postcondition</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
 <td></td>
-<td>-1573278687</td>
-<td>maven_smcrm_tests.HomePageNewCampaignLinkTest@7494e528</td></tr>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.postcondition()'><b>postcondition</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td></td>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.postcondition()'><b>postcondition</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td></td>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.postcondition()'><b>postcondition</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td></td>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.tearDown()'><b>tearDown</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td></td>
+<td>-1573540405</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -166,23 +174,17 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='maven_smcrm_tests.HomePageNewCampaignLinkTest.verifyCampaign()'><b>verifyCampaign</b><br>Test class: maven_smcrm_tests.HomePageNewCampaignLinkTest</td>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.verifyCampaign()'><b>verifyCampaign</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Parameter &apos;nodeurl&apos; is required by BeforeMethod on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuite.xml
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:289)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 	at java.util.ArrayList.forEach(Unknown Source)
 	at org.testng.TestRunner.privateRun(TestRunner.java:770)
 	at org.testng.TestRunner.run(TestRunner.java:591)
@@ -199,23 +201,17 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace963522361", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace963522361'><pre>org.testng.TestNGException: 
-Parameter &apos;nodeurl&apos; is required by BeforeMethod on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuite.xml
+</pre></div><a href='#' onClick='toggleBox("stack-trace278934944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace278934944'><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:289)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 	at java.util.ArrayList.forEach(Unknown Source)
 	at org.testng.TestRunner.privateRun(TestRunner.java:770)
 	at org.testng.TestRunner.run(TestRunner.java:591)
@@ -234,7 +230,181 @@ in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--271267787\testng-customsuit
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>maven_smcrm_tests.HomePageNewCampaignLinkTest@7494e528</td></tr>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.verifyCampaignData()'><b>verifyCampaignData</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1205555397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1205555397'><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.verifyInvalidCampaignData()'><b>verifyInvalidCampaignData</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1293618474", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1293618474'><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
+<tr>
+<td title='maven_smcrm_tests.ValidLoginCrmTest.verifyLogin()'><b>verifyLogin</b><br>Test class: maven_smcrm_tests.ValidLoginCrmTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace949057310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace949057310'><pre>org.testng.TestNGException: 
+Parameter &apos;nodeurl&apos; is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:289)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>maven_smcrm_tests.ValidLoginCrmTest@30b8a058</td></tr>
 </table><p>
 </body>
 </html>

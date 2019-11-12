@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
-    <parameter name="nodeurl" value="http://192.168.48.1:4444/wd/hub/"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="maven_smcrm_tests.HomePageNewCampaignLinkTest">
+      <class name="maven_smcrm_tests.ValidLoginCrmTest">
         <methods>
           <include name="precondition"/>
-          <include name="postcondition"/>
+          <include name="verifyLogin"/>
           <include name="verifyCampaign"/>
+          <include name="verifyInvalidCampaignData"/>
+          <include name="verifyCampaignData"/>
+          <include name="postcondition"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- maven_smcrm_tests.HomePageNewCampaignLinkTest -->
+      </class> <!-- maven_smcrm_tests.ValidLoginCrmTest -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -19,6 +19,11 @@ public class CreateNewCampaignPage extends BasePage{
 	@FindBy(name="property(Campaign Name)")
 	private WebElement CampaignName;
 	
+	@FindBy(xpath="//td[@class='mainLayer']//td[2]//div[1]//img[1]")
+	private WebElement startDate;
+	
+
+	
 	@FindBy(xpath="(//input[@value='Save'])[2]")
 	private WebElement save;
 	
@@ -26,8 +31,13 @@ public class CreateNewCampaignPage extends BasePage{
 	public void enterNewCampaignData(String name)
 	{
 		CampaignName.sendKeys(name);
-
 		
+	}
+	public void enterStartDate()
+	{
+		startDate.click();
+		
+		//startDate.sendKeys(strStartDate);
 	}
 	public void clickSave()
 	{
