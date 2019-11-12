@@ -19,8 +19,10 @@ public class HomePage extends BasePage{
 	
 	//
 	public void verifyNewCampaignLink()
-	{
+	{System.out.println("fine");
 		NewCampaignLink.click();
+		System.out.println("fine1");
+		
 	}
 	
 }

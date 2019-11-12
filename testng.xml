@@ -1,16 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Suite" parallel="tests">
   <test  name="ChromeTest">
-      <parameter name="nodeurl" value="http://192.168.48.1:4444/wd/hub/"/>
+      <parameter name="nodeurl" value="http://192.168.183.1:4444/wd/hub/"/>
       <parameter name="browser" value="chrome"/>
-      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
-      <classes>
-      <class name="maven_smcrm_tests.HomePageNewCampaignLinkTest"/>
+      <parameter name="appurl" value="http://192.168.65.128:8080/crm/HomePage.do"/>
      
-      </classes>
-   <!-- <packages>
+   <packages>
       <package name="maven_smcrm_tests"/>
-    </packages> --> 
+    </packages> 
         </test> 
   
   <!--<test  name="FirefoxTest">
