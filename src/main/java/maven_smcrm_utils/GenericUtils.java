@@ -1,9 +1,12 @@
 package maven_smcrm_utils;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -38,13 +41,21 @@ public class GenericUtils
 		{
 		}
 	}
-	
+	/***
+	 * 
+	 * @param element
+	 * @param index
+	 */
 	public static void selectByIndex(WebElement element, int index)
 	{
 		Select sel = new Select(element);
 		sel.selectByIndex(index);
 	}
-	
+	/***
+	 * 
+	 * @param element
+	 * @param value
+	 */
 	public static void selectByValue(WebElement element,String value)
 	{
 		Select sel = new Select(element);
@@ -81,7 +92,7 @@ public class GenericUtils
 	{
 		
 	}
-	public static void contactNameLookUpPopUp(WebDriver driver)
+	public static void contactLeadNameLookUpPopUp(WebDriver driver)
 	{
 		
 	}
@@ -100,5 +111,21 @@ public class GenericUtils
 	public static void parentAccountLookUpPopUp(WebDriver driver)
 	{
 		
+	}
+	/***
+	 * 
+	 * @param key
+	 * @return
+	 * @throws IOException
+	 */
+	public static String getdataFromProperties(String key) throws IOException
+	{
+		Properties p = new Properties();
+		File f= new File(Autoconstant.file_path_properties);
+		FileInputStream file = new FileInputStream(f);
+		p.load(file);
+		String data = p.getProperty(key);
+		return data;
+	
 	}
 }
