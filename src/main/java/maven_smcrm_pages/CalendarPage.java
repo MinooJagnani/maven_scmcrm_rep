@@ -24,20 +24,11 @@ public class CalendarPage extends BasePage{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickDay(String StrDay)
+	
+	
+	public void selectDate()
 	{
+		
 		calendarDay.click();
 	}
-
-	
-	public void clickMonth(String StrDay)
-	{
-		calendarMonth.click();
-	}
-	
-	public void clickYear(String StrDay)
-	{
-		calendarYear.click();
-	}
-
 }

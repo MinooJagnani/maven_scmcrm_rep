@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="4" failed="0" ignored="0" total="4" passed="0">
+<testng-results skipped="4" failed="0" ignored="1" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="333" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+  <suite name="Default suite" duration-ms="523" started-at="2019-11-15T12:17:52 IST" finished-at="2019-11-15T12:17:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="333" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+    <test name="Default test" duration-ms="523" started-at="2019-11-15T12:17:52 IST" finished-at="2019-11-15T12:17:53 IST">
       <class name="maven_smcrm_tests.ValidLoginCrmTest">
-        <test-method status="FAIL" signature="precondition(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="precondition" is-config="true" duration-ms="-1573540405130" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="FAIL" signature="precondition(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="precondition" is-config="true" duration-ms="-1573800472950" started-at="2019-11-15T12:17:52 IST" finished-at="1970-01-01T05:30:00 IST">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml]]>
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:289)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 at org.testng.internal.Parameters.createParameters(Parameters.java:721)
@@ -47,17 +47,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method status="SKIP" signature="verifyLogin()[pri:1, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="verifyLogin" duration-ms="0" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+        <test-method status="SKIP" signature="verifyLogin()[pri:1, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="verifyLogin" duration-ms="0" started-at="2019-11-15T12:17:53 IST" finished-at="2019-11-15T12:17:53 IST">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml]]>
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:289)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 at org.testng.internal.Parameters.createParameters(Parameters.java:721)
@@ -87,21 +87,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="postcondition" is-config="true" duration-ms="-1573540405282" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="postcondition" is-config="true" duration-ms="-1573800473151" started-at="2019-11-15T12:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcondition -->
-        <test-method status="SKIP" signature="verifyCampaign()[pri:2, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="verifyCampaign" duration-ms="0" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+        <test-method status="SKIP" signature="verifyCampaign()[pri:2, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="verifyCampaign" duration-ms="0" started-at="2019-11-15T12:17:53 IST" finished-at="2019-11-15T12:17:53 IST">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml]]>
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:289)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 at org.testng.internal.Parameters.createParameters(Parameters.java:721)
@@ -131,21 +131,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCampaign -->
-        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="postcondition" is-config="true" duration-ms="-1573540405315" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="postcondition" is-config="true" duration-ms="-1573800473220" started-at="2019-11-15T12:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcondition -->
-        <test-method status="SKIP" signature="verifyCampaignData()[pri:3, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="verifyCampaignData" duration-ms="0" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+        <test-method status="SKIP" signature="verifyCampaignData()[pri:3, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="verifyCampaignData" duration-ms="0" started-at="2019-11-15T12:17:53 IST" finished-at="2019-11-15T12:17:53 IST">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml]]>
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:289)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 at org.testng.internal.Parameters.createParameters(Parameters.java:721)
@@ -175,21 +175,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCampaignData -->
-        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="postcondition" is-config="true" duration-ms="-1573540405342" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="postcondition" is-config="true" duration-ms="-1573800473267" started-at="2019-11-15T12:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcondition -->
-        <test-method status="SKIP" signature="verifyInvalidCampaignData()[pri:4, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="verifyInvalidCampaignData" duration-ms="0" started-at="2019-11-12T12:03:25 IST" finished-at="2019-11-12T12:03:25 IST">
+        <test-method status="SKIP" signature="verifyInvalidCampaignData()[pri:4, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="verifyInvalidCampaignData" duration-ms="0" started-at="2019-11-15T12:17:53 IST" finished-at="2019-11-15T12:17:53 IST">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml]]>
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'nodeurl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
-in C:\Users\ratne\AppData\Local\Temp\testng-eclipse-1764341504\testng-customsuite.xml
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--888849956\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:289)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
 at org.testng.internal.Parameters.createParameters(Parameters.java:721)
@@ -219,11 +219,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidCampaignData -->
-        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="postcondition" is-config="true" duration-ms="-1573540405364" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="postcondition" is-config="true" duration-ms="-1573800473318" started-at="2019-11-15T12:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcondition -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@30b8a058]" name="tearDown" is-config="true" duration-ms="-1573540405377" started-at="2019-11-12T12:03:25 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@26aa12dd]" name="tearDown" is-config="true" duration-ms="-1573800473325" started-at="2019-11-15T12:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

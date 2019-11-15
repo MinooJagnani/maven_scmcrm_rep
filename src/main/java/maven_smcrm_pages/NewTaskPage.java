@@ -28,6 +28,16 @@ public class NewTaskPage extends BasePage{
 	
 	@FindBy(xpath="((//table)[3]//tr//a[@href='javascript:;'])[position() mod 2=1]")
 	private WebElement leadName;
+	
+	@FindBy(xpath="//tr//tr//tr[2]//td[1]")
+	private WebElement leadName2;
+	
+	@FindBy(xpath="//a[text()='sf sf']")
+	private WebElement leadName1;
+	
+	@FindBy(xpath="//input[@id='leContModName']")
+	private WebElement NameTxt;
+	
 
 	public NewTaskPage(WebDriver driver) {
 		super(driver);
@@ -54,6 +64,16 @@ public class NewTaskPage extends BasePage{
 		leadLookUpImg.click();
 	}
 	
+	
+	//public void clickLeadName(String strleadName)
+	public void clickLeadName()
+	{  
+		
+		leadName.click();
+		System.out.println("HERE  AFTERE CLICK");
+	}
+	
+
 	
 	
 

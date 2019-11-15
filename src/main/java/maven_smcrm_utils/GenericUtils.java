@@ -6,7 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -127,5 +129,25 @@ public class GenericUtils
 		String data = p.getProperty(key);
 		return data;
 	
+	}
+	
+	public static void switchChildWindow(WebDriver driver, String eTitle)
+	{
+		Set<String> strWinHandles = driver.getWindowHandles();
+		Iterator<String> itr = strWinHandles.iterator();
+		System.out.println("HERE IN SWITCH ");
+		while(itr.hasNext())
+		{
+			System.out.println("HERE IN SWITCH while ");
+			String wh=  itr.next();
+			System.out.println("wh      " + wh);
+			
+			if(driver.getTitle().equals(eTitle))
+			{
+				driver.switchTo().window(wh);
+				break;
+			}
+		}
+		
 	}
 }

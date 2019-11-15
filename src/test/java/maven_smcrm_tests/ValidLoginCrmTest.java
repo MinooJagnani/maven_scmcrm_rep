@@ -72,8 +72,9 @@ public class ValidLoginCrmTest extends BaseTest{
 	String strCampaignTitle1=ExcelData.getData(file_path,"TC04", 1, 1);
 	Reporter.log("strCampaignTitle ---" + strCampaignTitle1, true);
 
-/*
-    cp.enterStartDate();
+
+   cp.enterStartDate();
+	
 
     String   parenthandle = driver.getWindowHandle();
 	Set<String> shandle = driver.getWindowHandles();
@@ -87,37 +88,31 @@ public class ValidLoginCrmTest extends BaseTest{
 		if(!parenthandle.equals(win))
 		{
 			driver.switchTo().window(win);
-			CalendarPage calObj = new CalendarPage(driver);
-
-			  Date d = new Date();
-			  			   
-			    SimpleDateFormat s1 = new SimpleDateFormat("d");
-			    String day = s1.format(d);
-			    calObj.clickDay(day);
-			    
-			    SimpleDateFormat s2 = new SimpleDateFormat("MMMM");
-			    String month = s1.format(d);
-			    calObj.clickMonth(month);
-
-			    SimpleDateFormat s3 = new SimpleDateFormat("YYYY");
-			    String year = s1.format(d);
-			   calObj.clickYear(year);
+	
 			   break;
 		}
-		
-		Thread.sleep(2000);
 	}
-	Reporter.log("here " , true);
-	Reporter.log("driver.getWindowHandle() " + driver.getWindowHandle(), true);
-	driver.switchTo().window(driver.getWindowHandle());
+	CalendarPage calObj = new CalendarPage(driver);
+	calObj.selectDate();
+	  Thread.sleep(4000);
+	driver.switchTo().window(parenthandle);
+	/*
+	
+	   Date d = new Date();
+	    SimpleDateFormat s1 = new SimpleDateFormat("d");
+	    String day = s1.format(d);
+	    calObj.clickDay(day);
+	    
+	    SimpleDateFormat s2 = new SimpleDateFormat("MMMM");
+	    String month = s1.format(d);
+	    calObj.clickMonth(month);
+
+	driver.switchTo().window(parenthandle);
 	Reporter.log("OUT OF FOR LOOP " , true);
 	
 	*/
 	
-	
-
-	cp.clickSave();
-	
+	cp.clickSave();	
 	cp.verifyTitle(strCampaignTitle1);
 	
 	
@@ -177,7 +172,40 @@ public class ValidLoginCrmTest extends BaseTest{
 	 
 	tp.clickLeadDropDown(StrLeadValue);
 	Reporter.log("StrLeadValue ---"+StrLeadValue , true);
+	
 	tp.clickLeadPopUp();
+	
+	String childWinTitle = ExcelData.getData(file_path, "TC04", 1, 8);
+	Reporter.log("childWinTitle ---"+childWinTitle , true);
+	Thread.sleep(3000);
+	
+	 String   parenthandle = driver.getWindowHandle();
+		Set<String> shandle = driver.getWindowHandles();
+		  Thread.sleep(2000);
+
+		  
+		for(String win:shandle)
+		{
+			
+			Reporter.log("win " + win, true);
+			if(!parenthandle.equals(win))
+			{
+				driver.switchTo().window(win);
+				break;
+			}
+		}	
+		Thread.sleep(3000);
+		tp.clickLeadName();
+		
+		driver.switchTo().window(parenthandle);
+		//driver.switchTo().defaultContent();
+		
+	//GenericUtils.switchChildWindow(driver, childWinTitle);
+	//Thread.sleep(3000);	
+    //tp.clickLeadName(ExcelData.getData(file_path, "TC04", 1, 9));
+	Thread.sleep(3000);
+
+	 
 	
 
 	}

@@ -38,6 +38,7 @@ public abstract class BaseTest implements Autoconstant
 		dc.setBrowserName(browser);
 		//driver = new RemoteWebDriver(url, dc);
 		driver = new ChromeDriver();
+		driver.manage().window().fullscreen();
 		driver.get(appurl);
 	}
 	@AfterMethod
