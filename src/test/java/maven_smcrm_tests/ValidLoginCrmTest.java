@@ -73,49 +73,8 @@ public class ValidLoginCrmTest extends BaseTest{
 		
 		cp.enterNewCampaignData(campaignName);
 	    cp.enterStartDate();
-		
-	    String   parenthandle = driver.getWindowHandle();
-		Set<String> shandle = driver.getWindowHandles();
-		Thread.sleep(2000);
-  
-		for(String win:shandle)
-		{
-			
-			Reporter.log("win " + win, true);
-			if(!parenthandle.equals(win))
-			{
-				driver.switchTo().window(win);
-		
-				   break;
-			}
-		}
-		/*
-	    String strStartDateTitle=ExcelData.getData(file_path,"TC04", 1, 3);
-	    GenericUtils.switchChildWindow(driver, strStartDateTitle);
-	    */
-		
-		CalendarPage calObj = new CalendarPage(driver);
-		calObj.selectDate();
-		  Thread.sleep(4000);
-		driver.switchTo().window(parenthandle);
-	
-		
-		/*
-		
-		   Date d = new Date();
-		    SimpleDateFormat s1 = new SimpleDateFormat("d");
-		    String day = s1.format(d);
-		    calObj.clickDay(day);
-		    
-		    SimpleDateFormat s2 = new SimpleDateFormat("MMMM");
-		    String month = s1.format(d);
-		    calObj.clickMonth(month);
-	
-		driver.switchTo().window(parenthandle);
-		Reporter.log("OUT OF FOR LOOP " , true);
-		
-		*/
-		
+	    GenericUtils.calendarPopUp(driver);
+	    
 		cp.clickSave();	
 		cp.verifyTitle(strCampaignTitle1);
 		
@@ -151,14 +110,14 @@ public class ValidLoginCrmTest extends BaseTest{
 	
 	EditCampaignPage edp = new EditCampaignPage(driver);
 	Reporter.log("BEFORE edit campaign ---" , true);
-	Thread.sleep(2000);
+ 
 	
 	edp.clickHomelink();
 	String strHomeTitle = ExcelData.getData(file_path, "TC01", 1, 3);
 	edp.verifyTitle(strHomeTitle);
 	
 	Reporter.log("AFTER edit campaign ---" , true);
-	Thread.sleep(2000);
+ 
 	 
 	edp.clickTasklink();
 	String strTaskTitle = ExcelData.getData(file_path, "TC04", 1, 4);
@@ -168,12 +127,15 @@ public class ValidLoginCrmTest extends BaseTest{
 	
 	String strSubject = ExcelData.getData(file_path, "TC04", 1, 5);	
 	tp.enterSubject(strSubject);
-	Thread.sleep(4000);
-	Reporter.log("Subject name ---"+strSubject , true);
+ 
+	
+	//tp.clickSubjectPopup();
+	//GenericUtils.subjectNameLookUpPopUp(driver);
+ 
 	
 	String StrValue = ExcelData.getData(file_path, "TC04", 1, 6);
 	tp.clickPriority(StrValue);
-	Thread.sleep(4000);
+ 
 	Reporter.log("Selected value ---"+StrValue , true);
 	
 	String StrLeadValue = ExcelData.getData(file_path, "TC04", 1, 7);	 
@@ -181,33 +143,8 @@ public class ValidLoginCrmTest extends BaseTest{
 	Reporter.log("StrLeadValue ---"+StrLeadValue , true);
 	
 	tp.clickLeadPopUp();	
-	
-	/*
-	String childWinTitle = ExcelData.getData(file_path, "TC04", 1, 8);
-	Reporter.log("childWinTitle ---"+childWinTitle , true);
-	*/
-	
-	Thread.sleep(3000);
-	
-	 String   parenthandle = driver.getWindowHandle();
-	 Set<String> shandle = driver.getWindowHandles();
-		  Thread.sleep(2000);
-
-		  
-		for(String win:shandle)
-		{
-			
-			Reporter.log("win " + win, true);
-			if(!parenthandle.equals(win))
-			{
-				driver.switchTo().window(win);
-				break;
-			}
-		}	
-		Thread.sleep(3000);
-		tp.clickLeadName();
 		
-		driver.switchTo().window(parenthandle);
+	GenericUtils.contactLeadNameLookUpPopUp(driver);
 		tp.clickSave();
 		hp.verifyTitle(ExcelData.getData(file_path, "TC01", 1, 3));
 		
@@ -218,36 +155,44 @@ public class ValidLoginCrmTest extends BaseTest{
 	 	 
 		NewEventPage ep= new NewEventPage(driver);		
 		String strEventSubject = ExcelData.getData(file_path, "TC04", 1, 10);	
-		ep.enterSubject(strSubject);
+		ep.enterSubject(strEventSubject);
 		ep.clickCalendar();
 		 
-		String   parenthandle1 = driver.getWindowHandle();
-		Set<String> shandle1 = driver.getWindowHandles();
-		Thread.sleep(2000);
-  
-		for(String win:shandle1)
-		{
-			
-			Reporter.log("win " + win, true);
-			if(!parenthandle1.equals(win))
-			{
-				driver.switchTo().window(win);
+		GenericUtils.calendarPopUp(driver);
+
 		
-				   break;
-			}
-		}
-		
-		CalendarPage calObj = new CalendarPage(driver);
-		calObj.selectDate();
-		  Thread.sleep(4000);
-		driver.switchTo().window(parenthandle);
 		String strTime = ExcelData.getNumberDataFromCell(file_path, "TC04", 1, 11);	
-		String strTime1 = ExcelData.getData(file_path, "TC04", 1, 11);	
-		Reporter.log("strTime " + strTime, true);
-		Reporter.log("strTime1 " + strTime1, true);
 		ep.enterTime(strTime);
+		
+		
+		//testing select drop down
+		String strSelectProducts = ExcelData.getData(file_path, "TC04", 1, 12);
+		ep.selectProductsDropDown(strSelectProducts);
+		
+		ep.clickImgPopupLink();
+		GenericUtils.parentAccountLookUpPopUp(driver);
+		
+		/*
+		String parenthandle = driver.getWindowHandle();
+		Set<String> shandle2 = driver.getWindowHandles();
+ 		for(String win2:shandle2)
+		{
+	
+			if(!parenthandle.equals(win2))
+			{
+				driver.switchTo().window(win2);
+				break;
+			}
+		}	
+		Thread.sleep(2000);
+		ep.clickProductsName();
+		driver.switchTo().window(parenthandle);
+		*/
+		
 		ep.clickSave();
 		hp.verifyTitle(ExcelData.getData(file_path, "TC01", 1, 3));
+		
+		
 		
 	}
  

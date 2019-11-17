@@ -24,8 +24,18 @@ public class NewEventPage extends BasePage{
 	@FindBy(xpath="//input[@value='Save']")
 	private WebElement saveBtn;
 	
+	@FindBy(xpath="//select[@id='modsel']")
+	private WebElement selectDropDown2;
 	
-
+	@FindBy(xpath="//img[@id='modNameImg']")
+	private WebElement imgPopupLink;
+	
+	@FindBy(xpath="(//tr//tr//tr[2]//a[@href='javascript:;'])[position() mod 2=1])")
+	private WebElement productsName1;
+	
+	@FindBy(xpath="((//table)[3]//tr//a[@href='javascript:;'])[position() mod 2=1]")
+	private WebElement productsName;
+	
 	public NewEventPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -46,7 +56,20 @@ public class NewEventPage extends BasePage{
 		time.sendKeys(strTime);
 	}
 	
-	
+	public void selectProductsDropDown(String strSelectProducts )
+	{
+		GenericUtils.selectByValue(selectDropDown2, strSelectProducts);
+		
+	}
+	public void clickImgPopupLink()
+	{
+		imgPopupLink.click();
+	}
+	public void clickProductsName()
+	{  		
+		productsName.click();
+		System.out.println("HERE  AFTERE PROFUCT CLICK");
+	}
 	
 	public void clickSave()
 	{

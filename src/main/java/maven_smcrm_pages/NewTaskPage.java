@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
+
 import maven_smcrm_utils.BasePage;
 import maven_smcrm_utils.GenericUtils;
 
@@ -35,6 +36,10 @@ public class NewTaskPage extends BasePage{
 	@FindBy(xpath="//input[@id='leContModName']")
 	private WebElement NameTxt;
 	
+	@FindBy(xpath="(//img[@src='/crm/images/task_lookup.gif']")
+	private WebElement subjectLookUpImg;
+	
+	
 	@FindBy(xpath="//input[@value='Save']")
 	private WebElement saveBtn;
 
@@ -62,11 +67,14 @@ public class NewTaskPage extends BasePage{
 	{
 		leadLookUpImg.click();
 	}
-	
+	public void clickSubjectPopup()
+	{
+		subjectLookUpImg.click();
+		
+	}
 	public void clickLeadName()
 	{  		
-		leadName.click();
-		System.out.println("HERE  AFTERE CLICK");
+		leadName.click();		 
 	}
 	
 	public void clickSave()

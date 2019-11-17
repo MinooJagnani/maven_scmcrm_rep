@@ -17,8 +17,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 
 import com.google.common.io.Files;
+
+import maven_smcrm_pages.CalendarPage;
+import maven_smcrm_pages.NewEventPage;
+import maven_smcrm_pages.NewTaskPage;
 
 public class GenericUtils 
 {
@@ -102,7 +107,24 @@ public class GenericUtils
 	 */
 	public static void calendarPopUp(WebDriver driver)
 	{
-		
+		    String   parenthandle = driver.getWindowHandle();
+			Set<String> shandle = driver.getWindowHandles();
+			for(String win:shandle)
+			{
+				
+				Reporter.log("win " + win, true);
+				if(!parenthandle.equals(win))
+				{
+					driver.switchTo().window(win);
+			
+					   break;
+				}
+			}
+			
+			CalendarPage calObj = new CalendarPage(driver);
+			calObj.selectDate();
+			driver.switchTo().window(parenthandle);
+				
 	}
 	/***
 	 * 
@@ -111,9 +133,44 @@ public class GenericUtils
 	public static void subjectNameLookUpPopUp(WebDriver driver)
 	{
 		
+		 String   parenthandle = driver.getWindowHandle();
+		 Set<String> shandle = driver.getWindowHandles();
+			for(String win:shandle)
+			{
+				
+				Reporter.log("win " + win, true);
+				if(!parenthandle.equals(win))
+				{
+					driver.switchTo().window(win);
+					break;
+				}
+			}	
+			 
+			NewTaskPage sp= new NewTaskPage(driver);
+			sp.clickLeadName();
+			
+			driver.switchTo().window(parenthandle);
 	}
 	public static void contactLeadNameLookUpPopUp(WebDriver driver)
 	{
+		
+		 String   parenthandle = driver.getWindowHandle();
+		 Set<String> shandle = driver.getWindowHandles();
+			for(String win:shandle)
+			{
+				
+				Reporter.log("win " + win, true);
+				if(!parenthandle.equals(win))
+				{
+					driver.switchTo().window(win);
+					break;
+				}
+			}	
+			 
+			NewTaskPage tp= new NewTaskPage(driver);
+			tp.clickLeadName();
+			
+			driver.switchTo().window(parenthandle);
 		
 	}
 	public static void accountNameLookUpPopUp(WebDriver driver)
@@ -130,6 +187,22 @@ public class GenericUtils
 	}
 	public static void parentAccountLookUpPopUp(WebDriver driver)
 	{
+		
+		String parenthandle = driver.getWindowHandle();
+		Set<String> shandle2 = driver.getWindowHandles();
+ 		for(String win2:shandle2)
+		{
+	
+			if(!parenthandle.equals(win2))
+			{
+				driver.switchTo().window(win2);
+				break;
+			}
+		}	
+		
+		NewEventPage ep= new NewEventPage(driver);	
+		ep.clickProductsName();
+		driver.switchTo().window(parenthandle);
 		
 	}
 	/***
