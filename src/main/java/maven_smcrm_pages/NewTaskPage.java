@@ -30,14 +30,13 @@ public class NewTaskPage extends BasePage{
 	private WebElement leadName;
 	
 	@FindBy(xpath="//tr//tr//tr[2]//td[1]")
-	private WebElement leadName2;
-	
-	@FindBy(xpath="//a[text()='sf sf']")
 	private WebElement leadName1;
 	
 	@FindBy(xpath="//input[@id='leContModName']")
 	private WebElement NameTxt;
 	
+	@FindBy(xpath="//input[@value='Save']")
+	private WebElement saveBtn;
 
 	public NewTaskPage(WebDriver driver) {
 		super(driver);
@@ -64,14 +63,17 @@ public class NewTaskPage extends BasePage{
 		leadLookUpImg.click();
 	}
 	
-	
-	//public void clickLeadName(String strleadName)
 	public void clickLeadName()
-	{  
-		
+	{  		
 		leadName.click();
 		System.out.println("HERE  AFTERE CLICK");
 	}
+	
+	public void clickSave()
+	{
+		saveBtn.click();
+	}
+	
 	
 
 	

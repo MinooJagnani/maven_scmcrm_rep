@@ -69,27 +69,45 @@ public class GenericUtils
 		Select sel = new Select(element);
 		sel.selectByVisibleText(text);
 	}
-	
+	/***
+	 * 
+	 * @param driver
+	 */
 	public static void javaScriptClickOnOkButton(WebDriver driver)
 	{
 		driver.switchTo().alert().accept();
 	}
-	
+	/***
+	 * 
+	 * @param driver
+	 */
 	public static void javaScriptClickOnCancelButton(WebDriver driver)
 	{
 		driver.switchTo().alert().dismiss();
 	}
-	
+	/***
+	 * 
+	 * @param driver
+	 * @param text
+	 */
 	public static void javaScriptEnterText(WebDriver driver,String text)
 	{
 		Alert a = driver.switchTo().alert();
 		a.sendKeys(text);
 		a.accept();
 	}
+	/***
+	 * 
+	 * @param driver
+	 */
 	public static void calendarPopUp(WebDriver driver)
 	{
 		
 	}
+	/***
+	 * 
+	 * @param driver
+	 */
 	public static void subjectNameLookUpPopUp(WebDriver driver)
 	{
 		
@@ -131,11 +149,16 @@ public class GenericUtils
 	
 	}
 	
+	/***
+	 * 
+	 * @param driver
+	 * @param eTitle
+	 */
 	public static void switchChildWindow(WebDriver driver, String eTitle)
 	{
 		Set<String> strWinHandles = driver.getWindowHandles();
 		Iterator<String> itr = strWinHandles.iterator();
-		System.out.println("HERE IN SWITCH ");
+		
 		while(itr.hasNext())
 		{
 			System.out.println("HERE IN SWITCH while ");

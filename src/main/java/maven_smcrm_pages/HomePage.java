@@ -7,22 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 
 import maven_smcrm_utils.BasePage;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
-	@FindBy(xpath="//a[contains(text(),'New Campaign')]")
+	@FindBy(xpath = "//a[contains(text(),'New Campaign')]")
 	private WebElement NewCampaignLink;
-	
+
 	public HomePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-	
-	//
-	public void verifyNewCampaignLink()
-	{  
+
+	public void clickNewCampaignLink() {
 		NewCampaignLink.click();
-		System.out.println("fine1");
-		
+
 	}
-	
+
 }

@@ -15,6 +15,9 @@ public class EditCampaignPage extends BasePage{
 	@FindBy(xpath="//a[contains(text(),'New Task')]")
 	private WebElement taskLink;
 	
+	@FindBy(xpath="//a[contains(text(),'New Event')]")
+	private WebElement eventLink;
+	
 	@FindBy(xpath="(//input[@value='Edit'])[2]")
 	private WebElement edit;
 
@@ -45,4 +48,11 @@ public class EditCampaignPage extends BasePage{
 		edit.click();
 		//edit.submit();
 	}
+	public void clickEventlink()
+	{
+		System.out.println(" before Click Event link");		 
+		eventLink.click();
+		System.out.println(" after Click Event link");
+	}
+
 }
