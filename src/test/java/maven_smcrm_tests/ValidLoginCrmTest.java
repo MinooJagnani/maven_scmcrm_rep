@@ -1,5 +1,6 @@
 package maven_smcrm_tests;
 
+import java.awt.AWTException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -61,7 +62,7 @@ public class ValidLoginCrmTest extends BaseTest{
 	
 	
 	@Test(priority=3)
-	public void verifyCampaignData() throws InterruptedException
+	public void verifyCampaignData() throws InterruptedException, IOException, AWTException
 	{
 
 		CreateNewCampaignPage cp = new CreateNewCampaignPage(driver);	
@@ -75,9 +76,71 @@ public class ValidLoginCrmTest extends BaseTest{
 	    cp.enterStartDate();
 	    GenericUtils.calendarPopUp(driver);
 	    
+	    Thread.sleep(3000);
+	    cp.clickExpectedRevenue();
+	    String   parenthandle = driver.getWindowHandle();
+		 Set<String> shandle = driver.getWindowHandles();
+			for(String win:shandle)
+			{
+				
+				Reporter.log("win " + win, true);
+				if(!parenthandle.equals(win))
+				{
+					driver.switchTo().window(win);
+					break;
+				}
+			}	
+			Thread.sleep(3000);
+			cp.enterExpectedRevenue1();
+			 
+			cp.enterExpectedRevenue2();
+			
+			cp.enterExpectedRevenue3();
+			Thread.sleep(3000);
+			cp.enterExpectedRevenue4();
+			 
+			
+			driver.close();
+			driver.switchTo().window(parenthandle);	 
+			
+	   // GenericUtils.calculatorPopUp(driver);
+	 
+	    Thread.sleep(3000);
+	   
+	    
 		cp.clickSave();	
 		cp.verifyTitle(strCampaignTitle1);
 		
+		Thread.sleep(3000);
+		// check for print preview
+		
+		EditCampaignPage edp = new EditCampaignPage(driver);
+		
+		
+		edp.clickPrintPrreviewBtn();
+		Thread.sleep(3000);
+		Reporter.log("BEFORE PRINT ---"  , true);
+		String parenthandle11 = driver.getWindowHandle();
+		Set<String> shandle11 = driver.getWindowHandles();
+		Reporter.log("parenthandle11 ---" + parenthandle11, true);
+		Reporter.log("shandle11 size ---" + shandle11.size(), true);
+ 		for(String win11:shandle11)
+		{
+ 			Reporter.log("win11 ---" + win11, true);
+			if(!parenthandle11.equals(win11))
+			{
+				driver.switchTo().window(win11);
+				Thread.sleep(2000);
+
+				break;
+			}
+		}	
+		Thread.sleep(2000);
+		//driver.manage().window().maximize();
+		edp.clickPrinterLink(driver);
+		Thread.sleep(3000);
+		Reporter.log("AFTER PRINT", true);
+		driver.switchTo().window(parenthandle11);
 		
 	}
 

@@ -12,8 +12,17 @@ import maven_smcrm_utils.GenericUtils;
 
 public class NewTaskPage extends BasePage{
 	
+	
+	@FindBy(xpath="//tr[2]//td[1]]")
+	private WebElement subjectNAME;
+	
 	@FindBy(xpath="//input[@id='subject']")
 	private WebElement subject;
+	
+	
+	@FindBy(xpath="//img[@title='Subject Name Lookup']")
+	private WebElement subjectLookUpImg;
+	
 	
 	@FindBy(xpath="//select[@name='property(priority)']")
 	private WebElement priority;
@@ -35,9 +44,6 @@ public class NewTaskPage extends BasePage{
 	
 	@FindBy(xpath="//input[@id='leContModName']")
 	private WebElement NameTxt;
-	
-	@FindBy(xpath="(//img[@src='/crm/images/task_lookup.gif']")
-	private WebElement subjectLookUpImg;
 	
 	
 	@FindBy(xpath="//input[@value='Save']")
@@ -72,6 +78,11 @@ public class NewTaskPage extends BasePage{
 		subjectLookUpImg.click();
 		
 	}
+	public void clickSubjectNAME()
+	{  		
+		subjectNAME.click();		 
+	}
+	
 	public void clickLeadName()
 	{  		
 		leadName.click();		 

@@ -147,7 +147,7 @@ public class GenericUtils
 			}	
 			 
 			NewTaskPage sp= new NewTaskPage(driver);
-			sp.clickLeadName();
+			sp.clickSubjectNAME();
 			
 			driver.switchTo().window(parenthandle);
 	}
@@ -179,7 +179,23 @@ public class GenericUtils
 	}
 	public static void calculatorPopUp(WebDriver driver)
 	{
-		
+		String   parenthandle = driver.getWindowHandle();
+		 Set<String> shandle = driver.getWindowHandles();
+			for(String win:shandle)
+			{
+				
+				Reporter.log("win " + win, true);
+				if(!parenthandle.equals(win))
+				{
+					driver.switchTo().window(win);
+					break;
+				}
+			}	
+			 
+			//NewTaskPage tp= new NewTaskPage(driver);
+			//tp.clickLeadName();
+			
+			driver.switchTo().window(parenthandle);
 	}
 	public static void campaignNameLookUpPopUp(WebDriver driver)
 	{
