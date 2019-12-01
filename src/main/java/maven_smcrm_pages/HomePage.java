@@ -9,6 +9,11 @@ import maven_smcrm_utils.BasePage;
 
 public class HomePage extends BasePage {
 
+	
+
+	@FindBy(xpath = "//a[text()='Feedback']")
+	private WebElement feedbackLink;
+
 	@FindBy(xpath = "//a[contains(text(),'New Campaign')]")
 	private WebElement NewCampaignLink;
 
@@ -21,5 +26,9 @@ public class HomePage extends BasePage {
 		NewCampaignLink.click();
 
 	}
+	
+	public void clickFeedbackLink() {
+		feedbackLink.click();
 
+	}
 }

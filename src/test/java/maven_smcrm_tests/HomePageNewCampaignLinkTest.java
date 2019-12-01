@@ -8,8 +8,8 @@ import maven_smcrm_utils.BaseTest;
 import maven_smcrm_utils.ExcelData;
 
 public class HomePageNewCampaignLinkTest extends BaseTest{
-	
-	@Test(priority=2,enabled=false)
+
+	@Test(priority=2,enabled=false)	
 	public void verifyCampaign1()
 	{
 

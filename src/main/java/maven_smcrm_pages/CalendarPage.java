@@ -9,7 +9,8 @@ import maven_smcrm_utils.BasePage;
 
 public class CalendarPage extends BasePage{
 	
-	@FindBy(xpath="//a[@class='calCurrDay']")
+	 
+	@FindBy(xpath="//a[@class='calCurrDay'")
 	private WebElement calendarDay;
 	
 	@FindBy(xpath="//td[3]//span[1]//a[1]")

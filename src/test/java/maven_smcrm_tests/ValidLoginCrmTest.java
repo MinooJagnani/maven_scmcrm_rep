@@ -1,18 +1,24 @@
 package maven_smcrm_tests;
 
 import java.awt.AWTException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
+import javax.mail.MessagingException;
+
 import org.openqa.selenium.Alert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import maven_smcrm_pages.CalendarPage;
 import maven_smcrm_pages.CreateNewCampaignPage;
 import maven_smcrm_pages.EditCampaignPage;
+import maven_smcrm_pages.FeedBackPage;
 import maven_smcrm_pages.HomePage;
 import maven_smcrm_pages.LoginPage;
 import maven_smcrm_pages.NewEventPage;
@@ -21,7 +27,12 @@ import maven_smcrm_utils.BaseTest;
 import maven_smcrm_utils.ExcelData;
 import maven_smcrm_utils.GenericUtils;
 
+@Listeners(maven_smcrm_utils.MyListener.class)
+
 public class ValidLoginCrmTest extends BaseTest{
+	
+	private static final Logger logg = Logger.getLogger(Logger4j.class);
+	
 	@Test(priority = 1)
 	public void verifyLogin() throws IOException
 	{
@@ -41,6 +52,7 @@ public class ValidLoginCrmTest extends BaseTest{
 		lp.enterLoginPassword(strLoginPwd);
 		Reporter.log("user id ---" + strLoginId, true);
 		Reporter.log("password ---" + strLoginPwd, true);
+		logg.info("Check user id n " + strLoginId + "password  " + strLoginPwd);
 		lp.clickOnLoginButton();
 		
 		HomePage hp= new HomePage(driver);
@@ -48,12 +60,52 @@ public class ValidLoginCrmTest extends BaseTest{
 	    hp.verifyTitle(strHomeTitle);
 		
 	}
-	
+
 	
 	@Test(priority=2)
-	public void verifyCampaign()
+	public void verifyCampaign() throws InterruptedException, FileNotFoundException, IOException, MessagingException
 	{
-		HomePage hp = new HomePage(driver);	
+		HomePage hp = new HomePage(driver);
+		// click on Feedback link
+		//send email
+		Reporter.log("before click feedback", true);
+
+		hp.clickFeedbackLink();
+		Reporter.log("afteer click feedback", true);
+		
+		FeedBackPage fdb = new FeedBackPage(driver);
+		
+		String parenthandle1 = driver.getWindowHandle();
+		Set<String> shandle1 = driver.getWindowHandles();
+		Reporter.log("parenthandle1 ---" + parenthandle1, true);
+		Reporter.log("shandle1 size ---" + shandle1.size(), true);
+ 		for(String win11:shandle1)
+		{
+ 			Reporter.log("win11 ---" + win11, true);
+			if(!parenthandle1.equals(win11))
+			{
+				driver.switchTo().window(win11);
+				Thread.sleep(2000);
+
+				break;
+			}
+		}	
+		Thread.sleep(2000);
+		
+		driver.manage().window().maximize();
+		fdb.enterEmailSubject("TEST EMAIL");
+		fdb.enterEmailMessage("TRYING TO tes/SEND FROM CRM APPLICAITON");
+		//fdb.clickSendEmail();
+		fdb.clickcancel();
+		
+		Reporter.log("AFTER EMAIL", true);
+		driver.switchTo().window(parenthandle1);
+
+		
+		Reporter.log("ON PARENT WINDOWN AFTER EMAIL ---", true);
+			
+		
+		//click campaign
 		hp.clickNewCampaignLink();
 		String strCampaignTitle = ExcelData.getData(file_path, "TC03", 1, 0);
 		Reporter.log("strCampaignTitle ---" + strCampaignTitle, true);
@@ -205,9 +257,9 @@ public class ValidLoginCrmTest extends BaseTest{
 	tp.clickLeadDropDown(StrLeadValue);
 	Reporter.log("StrLeadValue ---"+StrLeadValue , true);
 	
-	tp.clickLeadPopUp();	
+	//tp.clickLeadPopUp();	
 		
-	GenericUtils.contactLeadNameLookUpPopUp(driver);
+	//GenericUtils.contactLeadNameLookUpPopUp(driver);
 		tp.clickSave();
 		hp.verifyTitle(ExcelData.getData(file_path, "TC01", 1, 3));
 		

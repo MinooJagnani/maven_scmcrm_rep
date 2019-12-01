@@ -123,6 +123,7 @@ public class GenericUtils
 			
 			CalendarPage calObj = new CalendarPage(driver);
 			calObj.selectDate();
+			Reporter.log("HERE IN CALENDAR ",true);
 			driver.switchTo().window(parenthandle);
 				
 	}

@@ -1,7 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Suite" parallel="tests">
-  <test  name="ChromeTest">
-      <parameter name="nodeurl" value="http://192.168.48.1:4444/wd/hub/"/>
+<suite name="Suite" parallel="tests" >
+<!-- <listeners>
+ <listener class-name="maven_smcrm_utils.MyListener"></listener>
+ </listeners>
+ -->
+ 
+  <test  name="FirefoxTest">
+      <parameter name="huburl" value="http://192.168.48.1:4444/wd/hub/"/>
+      <parameter name="browser" value="firefox"/>
+      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
+    	<packages>
+      
+      	<package name="maven_smcrm_tests"/>
+      
+    	</packages>
+  </test> 
+ <!--
+   <test  name="ChromeTest">
+      <parameter name="huburl" value="http://192.168.48.1:4444/wd/hub/"/>
       <parameter name="browser" value="chrome"/>
       <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
      
@@ -10,20 +26,13 @@
     </packages> 
         </test> 
   
-  <!--<test  name="FirefoxTest">
-      <parameter name="nodeurl" value="http://192.168.48.1:4444/wd/hub/"/>
-      <parameter name="browser" value="firefox"/>
-      <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
-    <packages>
-      <package name="maven_smcrm_tests"/>
-    </packages>
-  </test> 
   <test  name="IETest">
-      <parameter name="nodeurl" value="http://192.168.48.1:4444/wd/hub/"/>
+      <parameter name="huburl" value="http://192.168.48.1:4444/wd/hub/"/>
       <parameter name="browser" value="internet explorer"/>
       <parameter name="appurl" value="http://192.168.71.128:8080/crm/HomePage.do"/>
     <packages>
       <package name="maven_smcrm_tests"/>
     </packages>
   </test> -->
+  
 </suite> 

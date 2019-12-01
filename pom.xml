@@ -33,6 +33,11 @@
   
   <dependencies>
   <dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+  <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
     <version>LATEST</version>
@@ -59,6 +64,10 @@
     <version>LATEST</version>
 </dependency>
 
-
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
   </dependencies>
 </project>
