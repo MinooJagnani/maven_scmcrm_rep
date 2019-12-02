@@ -3,13 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="maven_smcrm_tests.HomePageNewCampaignLinkTest">
+      <class name="maven_smcrm_tests.ValidLoginCrmTest">
         <methods>
           <include name="precondition"/>
-          <include name="postcondition"/>
+          <include name="verifyLogin"/>
           <include name="verifyCampaign"/>
+          <include name="verifyInvalidCampaignData"/>
+          <include name="verifyCampaignData"/>
+          <include name="postcondition"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- maven_smcrm_tests.HomePageNewCampaignLinkTest -->
+      </class> <!-- maven_smcrm_tests.ValidLoginCrmTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

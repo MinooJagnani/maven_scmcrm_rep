@@ -1,91 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="4" failed="0" ignored="0" total="4" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Title is not matching 192.168.71.128]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="46004" started-at="2019-11-09T11:35:08 IST" finished-at="2019-11-09T11:35:54 IST">
+  <suite name="Default suite" duration-ms="265" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="46004" started-at="2019-11-09T11:35:08 IST" finished-at="2019-11-09T11:35:54 IST">
-      <class name="maven_smcrm_tests.HomePageNewCampaignLinkTest">
-        <test-method status="PASS" signature="precondition(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:maven_smcrm_tests.HomePageNewCampaignLinkTest@7c29daf3]" name="precondition" is-config="true" duration-ms="32662" started-at="2019-11-09T11:35:08 IST" finished-at="2019-11-09T11:35:41 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://192.168.48.1:4444/wd/hub/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[http://192.168.71.128:8080/crm/HomePage.do]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- precondition -->
-        <test-method status="FAIL" signature="verifyCampaign()[pri:2, instance:maven_smcrm_tests.HomePageNewCampaignLinkTest@7c29daf3]" name="verifyCampaign" duration-ms="12431" started-at="2019-11-09T11:35:41 IST" finished-at="2019-11-09T11:35:53 IST">
-          <exception class="java.lang.AssertionError">
+    <test name="Default test" duration-ms="265" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
+      <class name="maven_smcrm_tests.ValidLoginCrmTest">
+        <test-method status="FAIL" signature="precondition(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="precondition" is-config="true" duration-ms="-1574404505559" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.fail(Assert.java:102)
-at maven_smcrm_utils.BasePage.verifyTitle(BasePage.java:29)
-at maven_smcrm_tests.HomePageNewCampaignLinkTest.verifyCampaign(HomePageNewCampaignLinkTest.java:17)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
 at org.testng.TestRunner.privateRun(TestRunner.java:770)
 at org.testng.TestRunner.run(TestRunner.java:591)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
-            <line>
-              <![CDATA[Title is not matching 192.168.71.128]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- verifyCampaign -->
-        <test-method status="PASS" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.HomePageNewCampaignLinkTest@7c29daf3]" name="postcondition" is-config="true" duration-ms="779" started-at="2019-11-09T11:35:53 IST" finished-at="2019-11-09T11:35:54 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyCampaign status=FAILURE method=HomePageNewCampaignLinkTest.verifyCampaign()[pri:2, instance:maven_smcrm_tests.HomePageNewCampaignLinkTest@7c29daf3] output=Title is not matching 192.168.71.128]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- precondition -->
+        <test-method status="SKIP" signature="verifyLogin()[pri:1, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="verifyLogin" duration-ms="0" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="postcondition" is-config="true" duration-ms="-1574404505700" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcondition -->
-      </class> <!-- maven_smcrm_tests.HomePageNewCampaignLinkTest -->
-    </test> <!-- ChromeTest -->
-  </suite> <!-- Suite -->
+        <test-method status="SKIP" signature="verifyCampaign()[pri:2, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="verifyCampaign" duration-ms="0" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCampaign -->
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="postcondition" is-config="true" duration-ms="-1574404505731" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postcondition -->
+        <test-method status="SKIP" signature="verifyCampaignData()[pri:3, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="verifyCampaignData" duration-ms="0" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCampaignData -->
+        <test-method status="SKIP" signature="verifyInvalidCampaignData()[pri:4, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="verifyInvalidCampaignData" duration-ms="0" started-at="2019-11-22T12:05:05 IST" finished-at="2019-11-22T12:05:05 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'huburl' is required by BeforeClass on method precondition but has not been marked @Optional or defined
+in C:\Users\ratne\AppData\Local\Temp\testng-eclipse--1447987941\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:289)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
+at org.testng.internal.Parameters.createParameters(Parameters.java:721)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidCampaignData -->
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="postcondition" is-config="true" duration-ms="-1574404505747" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postcondition -->
+        <test-method status="SKIP" signature="postcondition(org.testng.ITestResult)[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="postcondition" is-config="true" duration-ms="-1574404505762" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postcondition -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:maven_smcrm_tests.ValidLoginCrmTest@4d95d2a2]" name="tearDown" is-config="true" duration-ms="-1574404505762" started-at="2019-11-22T12:05:05 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- maven_smcrm_tests.ValidLoginCrmTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

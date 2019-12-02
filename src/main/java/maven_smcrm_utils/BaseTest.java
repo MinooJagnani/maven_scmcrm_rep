@@ -10,34 +10,56 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import com.beust.jcommander.Parameter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+
 public abstract class BaseTest implements Autoconstant
 {
+	
 	static
 	{
+		Reporter.log("HELLO", true);
 		System.setProperty(chrome_key, chrome_value);
+		//WebDriverManager.firefoxdriver().setup();
+	
 		System.setProperty(firefox_key, firefox_value);
 		System.setProperty(ie_key, ie_value);
 	}
+	
 	public WebDriver driver;
-	@Parameters({"nodeurl","browser","appurl"})
+	
+
+	
+	
+	
+	@Parameters({"huburl","browser","appurl"})
 	@BeforeClass
-	public void precondition(String nodeurl, String browser, String appurl) throws MalformedURLException
+	public void precondition(String huburl, String browser, String appurl) throws MalformedURLException
 	{
-		URL url = new URL(nodeurl);
+		URL url = new URL(huburl);
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName(browser);
-		//driver = new RemoteWebDriver(url, dc);
-		driver = new ChromeDriver();
+		
+		Reporter.log("huburl  name    " + huburl , true);;
+		Reporter.log("browser  name    " + browser , true);;
+		driver = new RemoteWebDriver(url, dc);
+		//driver = new ChromeDriver();
+		//driver.manage().window().fullscreen();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(appurl);
 	}
 	@AfterMethod

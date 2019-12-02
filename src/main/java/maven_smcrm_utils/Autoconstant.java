@@ -10,4 +10,5 @@ public interface Autoconstant
 	String ie_value = "./src/main/resources/Drivers/IEDriverServer.exe";
 	
 	String file_path ="./src/test/resources/Data/input.xlsx";
+	String file_path_properties="./Data/inputdata.properties";
 }
