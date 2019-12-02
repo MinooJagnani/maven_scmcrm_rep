@@ -6,6 +6,7 @@ import org.testng.log4testng.Logger;
 public class Logger4j 
 {
 	private static final Logger logg = Logger.getLogger(Logger4j.class);
+	// this is looger object
 	
 	@Test
 	public void testA()
