@@ -5,7 +5,7 @@ import org.testng.log4testng.Logger;
 
 public class Logger4j 
 {
-	//private static final Logger logg = Logger.getLogger(Logger4j.class);
+	private static final Logger logg = Logger.getLogger(Logger4j.class);
 	
 	@Test
 	public void testA()
