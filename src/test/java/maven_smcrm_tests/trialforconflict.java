@@ -9,6 +9,8 @@ public class trialforconflict {
 	{
 		Reporter.log("hello minoo",true);
 		Reporter.log("Hello Trial for conflict");
+		Reporter.log("hello trial again",true);
+
 		
 	}
 
