@@ -13,6 +13,8 @@ public class trialforconflict {
 		
 		Reporter.log("hello minoo again2",true);
 		Reporter.log("hello minoo again",true);
+		Reporter.log("hello minoo again",true);
+
 
 
 	}
