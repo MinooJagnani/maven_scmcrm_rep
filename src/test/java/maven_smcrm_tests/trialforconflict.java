@@ -11,7 +11,6 @@ public class trialforconflict {
 		Reporter.log("Hello Trial for conflict");
 		Reporter.log("hello trial again",true);
 
-		Reporter.log("hello trial again again",true);
 	
 	}
 
