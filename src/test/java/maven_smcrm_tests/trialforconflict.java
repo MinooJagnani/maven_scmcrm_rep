@@ -8,10 +8,16 @@ public class trialforconflict {
 	public void oneMethod()
 	{
 		Reporter.log("hello minoo",true);
+
 		Reporter.log("Hello Trial for conflict");
 		Reporter.log("hello trial again",true);
 
 	
+	Reporter.log("hello minoo again",true);
+		
+		Reporter.log("hello minoo again2",true);
+
+
 	}
 
 }
